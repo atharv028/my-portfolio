@@ -5,14 +5,7 @@ import { socialMedia } from "../data";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="footer grid"
-          className="w-full h-full opacity-50"
-        />
-      </div>
+    <footer className="w-full pb-10" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
@@ -34,7 +27,7 @@ const Footer = () => {
         <p className="text-sm md:text-base md:font-normal font-light">
           © 2024 Atharv Tare. All rights reserved.
         </p>
-        <div className="flex items-center gap-3 md:gap-6 md:mt-10">
+        <div className="flex items-center gap-3 md:gap-6">
           {socialMedia.map(({ id, img }) => (
             <a key={id}>
               <div className="flex items-center justify-center bg-black-200  rounded-lg border border-black-300 w-10 h-10 cursor-pointer backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 sm:mt-10">

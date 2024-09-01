@@ -3,6 +3,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./ui/magic-button";
 import { FaLocationArrow } from "react-icons/fa";
+import { heroItems } from "../data";
 
 const Hero = () => {
   return (
@@ -26,19 +27,20 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Vite
+            {heroItems.preHeading}
           </h2>
           <TextGenerateEffect
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mt-4"
-            words="Transforming Concepts into Seamless User Experiences"
+            words={heroItems.heading + heroItems.headingSpan}
+            spanWords={heroItems.headingSpan}
           />
           <p className="text-center text-gray-300 mt-4 md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hey there! I'm Atharv, a web developer based in India.
+            {heroItems.description}
           </p>
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title={heroItems.btnText}
               icon={<FaLocationArrow />}
               position="right"
             />
